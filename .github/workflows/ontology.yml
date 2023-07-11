@@ -4,7 +4,7 @@ name: Process Notes Ontology
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["main"]
     paths:
       - 'ontology.ttl'
 
