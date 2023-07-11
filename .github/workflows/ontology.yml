@@ -34,8 +34,8 @@ jobs:
         with:
           token: ${{ secrets.DATAWORLD_PAT }}
           agentdatasetid: "jmoney8080/ddw-catalogs"
-          file: notes.ttl
-          filename: test-notes.ttl
+          file: ontology/notes.ttl
+          filename: notes-ontology.ttl
   # Single deploy job since we're just deploying
   pages:
     runs-on: ubuntu-latest
