@@ -6,7 +6,7 @@ on:
   push:
     branches: ["main"]
     paths:
-      - 'ontology.ttl'
+      - 'notes/ontology.ttl'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -39,9 +39,6 @@ jobs:
           filename: test-notes.ttl
   # Single deploy job since we're just deploying
   pages:
-    environment:
-      name: github-pages
-      url: ${{ steps.pages.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -51,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './ontology.ttl'
+          path: './ontology'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
