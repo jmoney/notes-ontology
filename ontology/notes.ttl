@@ -47,6 +47,14 @@ notes:name rdf:type owl:DatatypeProperty ;
            rdfs:label "Name" .
 
 
+###  https://www.jmoney.dev/notes#next
+notes:next rdf:type owl:ObjectProperty ;
+               rdfs:domain notes:Daily ;
+               rdfs:range notes:Daily ;
+               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+               rdfs:label "next" .
+
+
 ###  https://www.jmoney.dev/notes#title
 notes:title rdf:type owl:DatatypeProperty ;
             rdfs:domain notes:Note ;
