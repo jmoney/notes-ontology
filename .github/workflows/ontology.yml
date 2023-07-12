@@ -33,7 +33,7 @@ jobs:
         uses: jmoney/dataworld-file-upload-action@main
         with:
           token: ${{ secrets.DATAWORLD_PAT }}
-          agentdatasetid: "jmoney8080/ddw-catalogs"
+          agentdatasetid: "jmoney/ddw-catalogs"
           file: ontology/notes.ttl
           filename: notes-ontology.ttl
   # Single deploy job since we're just deploying
