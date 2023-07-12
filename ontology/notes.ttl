@@ -16,6 +16,14 @@
 #    Object Properties
 #################################################################
 
+###  https://www.jmoney.dev/notes#next
+notes:next rdf:type owl:ObjectProperty ;
+               rdfs:domain notes:Daily ;
+               rdfs:range notes:Daily ;
+               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+               rdfs:label "next" .
+
+
 ###  https://www.jmoney.dev/notes#previous
 notes:previous rdf:type owl:ObjectProperty ;
                rdfs:domain notes:Daily ;
@@ -27,6 +35,22 @@ notes:previous rdf:type owl:ObjectProperty ;
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://www.jmoney.dev/notes#complete
+notes:complete rdf:type owl:DatatypeProperty ;
+               rdfs:domain notes:Task ;
+               rdfs:comment "Whether a Task is complete or not" ;
+               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+               rdfs:label "complete" .
+
+
+###  https://www.jmoney.dev/notes#content
+notes:content rdf:type owl:DatatypeProperty ;
+               rdfs:domain notes:Task ;
+               rdfs:comment "The content of a task" ;
+               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+               rdfs:label "content" .
+
 
 ###  https://www.jmoney.dev/notes#filename
 notes:filename rdf:type owl:DatatypeProperty ;
@@ -100,6 +124,13 @@ notes:Note rdf:type owl:Class ;
            rdfs:comment "A general note" ;
            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
            rdfs:label "Note" .
+
+
+###  https://www.jmoney.dev/notes#Note
+notes:Task rdf:type owl:Class ;
+           rdfs:comment "A task part of a Daily Note" ;
+           rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
+           rdfs:label "Task" .
 
 
 #################################################################
