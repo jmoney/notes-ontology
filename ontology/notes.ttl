@@ -16,41 +16,10 @@
 #    Object Properties
 #################################################################
 
-###  https://www.jmoney.dev/notes#next
-notes:next rdf:type owl:ObjectProperty ;
-               rdfs:domain notes:Daily ;
-               rdfs:range notes:Daily ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "next" .
-
-
-###  https://www.jmoney.dev/notes#previous
-notes:previous rdf:type owl:ObjectProperty ;
-               rdfs:domain notes:Daily ;
-               rdfs:range notes:Daily ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "previous" .
-
 
 #################################################################
 #    Data properties
 #################################################################
-
-###  https://www.jmoney.dev/notes#complete
-notes:complete rdf:type owl:DatatypeProperty ;
-               rdfs:domain notes:Task ;
-               rdfs:comment "Whether a Task is complete or not" ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "complete" .
-
-
-###  https://www.jmoney.dev/notes#content
-notes:content rdf:type owl:DatatypeProperty ;
-               rdfs:domain notes:Task ;
-               rdfs:comment "The content of a task" ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "content" .
-
 
 ###  https://www.jmoney.dev/notes#filename
 notes:filename rdf:type owl:DatatypeProperty ;
@@ -71,33 +40,11 @@ notes:name rdf:type owl:DatatypeProperty ;
            rdfs:label "Name" .
 
 
-###  https://www.jmoney.dev/notes#next
-notes:next rdf:type owl:ObjectProperty ;
-               rdfs:domain notes:Daily ;
-               rdfs:range notes:Daily ;
-               rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-               rdfs:label "next" .
-
-
-###  https://www.jmoney.dev/notes#rank
-notes:rank rdf:type owl:DatatypeProperty ;
-            rdfs:domain notes:Daily ;
-            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-            rdfs:label "rank" .
-
-
 ###  https://www.jmoney.dev/notes#title
 notes:title rdf:type owl:DatatypeProperty ;
             rdfs:domain notes:Note ;
             rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
             rdfs:label "title" .
-
-
-###  https://www.jmoney.dev/notes#today
-notes:today rdf:type owl:DatatypeProperty ;
-            rdfs:domain notes:Daily ;
-            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-            rdfs:label "today" .
 
 
 #################################################################
@@ -109,14 +56,6 @@ notes:Binder rdf:type owl:Class ;
              rdfs:comment "A collection of Topics" ;
              rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
              rdfs:label "Binder" .
-
-
-###  https://www.jmoney.dev/notes#Daily
-notes:Daily rdf:type owl:Class ;
-            rdfs:subClassOf notes:Note ;
-            rdfs:comment "Is a specialization of a note in which it has a \"today\" date and a link to a previous note" ;
-            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-            rdfs:label "Daily" .
 
 
 ###  https://www.jmoney.dev/notes#Divider
@@ -131,13 +70,6 @@ notes:Note rdf:type owl:Class ;
            rdfs:comment "A general note" ;
            rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
            rdfs:label "Note" .
-
-
-###  https://www.jmoney.dev/notes#Note
-notes:Task rdf:type owl:Class ;
-           rdfs:comment "A task part of a Daily Note" ;
-           rdfs:isDefinedBy <https://www.jmoney.dev/notes#> ;
-           rdfs:label "Task" .
 
 
 #################################################################
